@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+*{
+    
+    font-family: 'Heebo', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+   background: #ff4b1f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1fddff, #ff4b1f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1fddff, #ff4b1f); /* W3C, IE 10+/ Edge, Firefox  16+, Chrome 26+, Opera 12+, Safari 7+ */
+margin: 0;
+}
+
+
+nav{
+    background: #7bd166;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9de21c, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: aliceblue;
+    padding: 15px;
+    display: flex;
+    justify-content:flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:100;
+}
+nav a{
+    color: aliceblue;
+    margin-left: 60px;
+    text-decoration: none;
+    font-weight: bolder;
+    position: relative;
+    font-size: larger;
+}
+
+
+nav a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateY(50px);
+    transition: transform 0.3 ease;
+    opacity:0 ;
+    border-bottom:3px solid whitesmoke ;
+}
+
+nav a:hover::after{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+header{
+    height: 100vh;
+    background-image: url(./images/christopher-gower-m_HRfLhgABo-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header::after{
+    content: "";
+    background-color: rgb(15, 22, 24);
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+}
+
+header *{
+    position: relative;
+    z-index: 2;
+}
+
+header h1{
+    font-size: 70px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: bolder;
+}
+
+header p{
+    font-size: 45px;
+    margin: 0;
+    font-weight: bolder;
+}
+
+section{
+    text-align: center;
+    padding: 40px;
+}
+
+section h2{
+    margin-bottom: 0;
+}
+
+section p{
+    margin-top:0 ;
+}
+
+
+.about-me h1{
+    font-weight: bolder;
+    color: rgb(17, 17, 17);
+}
+
+.about-me p{
+    font-weight: bold;
+    justify-content: start;
+    align-items: center;
+}
+
+.projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: -200px;
+    margin: 30px auto 0;
+}
+
+.project-tile{
+    max-width: 250px;
+    margin: 40px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.project-tile:hover{
+    transform: scale(1.1);
+}
+
+
+.project-tile img{
+    max-width: 120%;
+    
+}
+.project-tile p{
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+    font-weight: bolder;
+}
+
+
+.bg-pinkish{
+    background-color: rgb(218, 219, 124);
+    color: rgb(223, 31, 41);
+}
+
+
+.social ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin-right: 0;
+    flex-wrap: wrap;
+    
+}
+
+.social-ul a{
+    color: rgb(21, 91, 243);
+    font-size: 30px;
+    margin: 3px 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.social-ul a:hover{
+    transform: scale(1.3);
+    color: #f06f06;
+    transition: transform 0.3s ease-in;
+
+}
+
+
+
+footer{
+    background: #fd746c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+
+footer .fa-heart{
+    color: rgb(76, 6, 241);
+    
+}
+
+
+@media (max-width: 445){
+    section{
+        padding: 0px;
+        
+    }
+}
